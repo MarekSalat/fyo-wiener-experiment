@@ -1,2 +1,12 @@
 archive
 node_modules
+
+*.aux
+*.blg
+*.bbl
+doc/build/main.log
+*.out
+doc/build/main.pdf
+doc/build/main.synctex.gz
+doc/build/main.toc
+*.bak

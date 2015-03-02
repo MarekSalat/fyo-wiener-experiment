@@ -10,3 +10,5 @@ doc/build/main.pdf
 doc/build/main.synctex.gz
 doc/build/main.toc
 *.bak
+doc/build/texput.log
+doc/build/texput.log

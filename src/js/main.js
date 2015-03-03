@@ -381,12 +381,14 @@ $(function(){
         });
 
         var gui = new dat.GUI();
-        gui.add(game, 'timeshift').min(0).max(5);
-        gui.add({wavelength: 700}, 'wavelength', 300, 700).onChange(function (value){
+        gui.add(game, 'timeshift').min(0).max(5).name("Timeshift");
+        var controller = gui.add({wavelength: 700}, 'wavelength', 300, 700);
+        controller.onChange(function (value){
             game.setWavelength(value)
         });
-        gui.add(game, 'filmAngle').min(0).max(45);
-        gui.add(game, 'filmThickness').min(5).max(512);
+        controller.name('Wavelength [nm]');
+        gui.add(game, 'filmAngle').min(0).max(45).name("Film angle [°]");
+        gui.add(game, 'filmThickness').min(5).max(512).name("Film thickness [px]");
     };
 
     var update = function () {
